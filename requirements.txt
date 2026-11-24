@@ -1,0 +1,8 @@
+# ROS 2 Humble: use system Python 3.10 or a --system-site-packages venv.
+# rclpy/control_msgs/etc. come from /opt/ros/humble, not pip.
+numpy>=1.23,<2
+scipy>=1.9,<2
+PyYAML>=6,<7
+pin>=2.6,<5
+osqp>=1.0,<2
+pytest>=6

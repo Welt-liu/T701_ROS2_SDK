@@ -1,0 +1,34 @@
+{
+  "upstream": "OpenArm A1 SDK 2.0",
+  "model_basis": "Origami V2总装配体_updated.urdf / origami_control.urdf",
+  "original_files": {
+    "Origami V2/meshes/l_joint2_link.STL": "eb3d88bf99cc4956a20025aaef59ce6f719480a761b76530d93c0f34e36974c3",
+    "Origami V2/meshes/r_joint5_link.STL": "f74f92c337bcb0a2f03182abc8b7050b8ef828f12c7546bcd1e1b69c683a1362",
+    "Origami V2/meshes/r_joint4_link.STL": "2c4d8732b0a54a54c687fc20f8a298a4908e45de960d575b1e51c1157d8f5447",
+    "Origami V2/meshes/r_joint7_link.STL": "bb2ad5844ec3b23eb6615299dac75abead2271b8631fdc76a94517a654cc74a7",
+    "Origami V2/meshes/l_joint7_link.STL": "d133aeb7292b1cdf1c8f82bf3f75da15672cf736da6500e7700324af4de15a7b",
+    "Origami V2/meshes/base_link.STL": "3bf8132dca593464f6bd10e0761a73fa03981c8a9c2b333f4ad6747eea2b6a1c",
+    "Origami V2/meshes/r_joint2_link.STL": "ff76473e34b14167dafa12ed7ffe0b602d7e1475bd08602ede37dc9760b2daa2",
+    "Origami V2/meshes/l_joint6_link.STL": "5de92410e2e165888ef4b4f8a6a485ed158aba27de89b1264ae7219231703548",
+    "Origami V2/meshes/l_joint5_link.STL": "7c52895381f8c228f865191b38cc1bc7ed73bdb2bc17c7cfb79de2cbe4eca054",
+    "Origami V2/meshes/r_joint1_link.STL": "37267829e99cfc637449bf64f95accabb1c3510f8f81279481b4d052372e6c2b",
+    "Origami V2/meshes/l_joint4_link.STL": "3591e4f870b3ae18f670de36c9c898330d069aed8cd3d5e3e1dc686fb69d9c7f",
+    "Origami V2/meshes/r_joint3_link.STL": "f3d03bed2178f7e1d60d672a6bde3e566e2a9b4ca1b98a571b16d8bf4e31b1c4",
+    "Origami V2/meshes/r_joint6_link.STL": "66cda380da5976898970e528cd90e73f667783400f44d89b1059b19e3187f820",
+    "Origami V2/meshes/l_joint3_link.STL": "5bb77339c9bd095e06337ab472e0b01688f01e6cca2011815d903f1869c5c2bf",
+    "Origami V2/meshes/l_joint1_link.STL": "b0fbac8d2377673139bc41fb08687ad611c810ecc3a198ce119074b9c515ca16",
+    "Origami V2/urdf/origami_control.urdf": "bad64f175dab98b6d99d4d64c0a532ae36bbd2d1a6d595f322683500014c9d69",
+    "Origami V2/urdf/Origami V2总装配体_updated.urdf": "8b9eccac553e024eaceb4f7d32a0f35b113e0514787349cdef77c46405505a6d",
+    "robot_param/Openarm_left.yaml": "0e9e14424b7476338d97425d0e74f628d8f5cf702ebb06dabe261a33a1e74466",
+    "robot_param/serial_binding.yaml": "8363673e01775d4f2d9059b037ac71f960825d871420c59718dad54ba2eb52fc",
+    "robot_param/Openarm_right.yaml": "105b9a2354f4a751dd10f553faf9067eb6cda32ea2badfceca82847cd448449f",
+    "robot_param/motor_param/7dof_openarm_HT_params_left.yaml": "f590f17ce3c7fb256600ddfde03fe95b7555e469034f45e67f8828a16078502c",
+    "robot_param/motor_param/7dof_openarm_HT_params_right.yaml": "cb0977bae290dfdbd08858b53711aa806bb877be7644ac15ed2f6088217bb6c2"
+  },
+  "adaptations": [
+    "URDF robot name changed to T701-HT; joint/link names, origins, dynamics, limits and collision geometry unchanged.",
+    "Mesh references changed to package://t701_ht_description/meshes/<name>.",
+    "Configuration paths changed to independent ROS 2 description package layout."
+  ],
+  "collision_scope": "URDF contains body and 14 arm links; gripper fingers, cables and external objects are absent."
+}

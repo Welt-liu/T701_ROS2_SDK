@@ -1,0 +1,434 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="T701-HT">
+  <mujoco>
+    <compiler meshdir="../meshes/" balanceinertia="true" discardvisual="false" />
+  </mujoco>
+  <link name="base_link">
+    <inertial>
+      <origin xyz="0.00097591 1.609e-05 0.30789235" rpy="0 0 0" />
+      <mass value="12.79366946" />
+      <inertia ixx="0.53730741" ixy="-1.878e-05" ixz="-0.0023791" iyy="0.51882313" iyz="-3.292e-05" izz="0.07504232" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://t701_ht_description/meshes/base_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://t701_ht_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="l_joint1_link">
+    <inertial>
+      <origin xyz="-0.00713338 0.05355602 1.817e-05" rpy="0 0 0" />
+      <mass value="1.15977606" />
+      <inertia ixx="0.00150353" ixy="3.119e-05" ixz="1e-07" iyy="0.00124269" iyz="-1.67e-06" izz="0.00147625" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://t701_ht_description/meshes/l_joint1_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://t701_ht_description/meshes/l_joint1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="A_l_joint1_link" type="revolute">
+    <origin xyz="0 0.126 0.513" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="l_joint1_link" />
+    <axis xyz="0 1 0" />
+    <limit lower="-3.0543" upper="1.6581" effort="70" velocity="60" />
+  </joint>
+  <link name="l_joint2_link">
+    <inertial>
+      <origin xyz="-0.01934445 -1.746e-05 -0.04177167" rpy="0 0 0" />
+      <mass value="0.15403929" />
+      <inertia ixx="0.00010685" ixy="1.6e-07" ixz="4.47e-05" iyy="0.00017847" iyz="-9e-08" izz="0.000127" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://t701_ht_description/meshes/l_joint2_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://t701_ht_description/meshes/l_joint2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="A_l_joint2_link" type="revolute">
+    <origin xyz="0 0.059 0" rpy="0 0 0" />
+    <parent link="l_joint1_link" />
+    <child link="l_joint2_link" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.2793" upper="3.4208" effort="70" velocity="60" />
+  </joint>
+  <link name="l_joint3_link">
+    <inertial>
+      <origin xyz="-0.00114099 0.00138093 -0.09427347" rpy="0 0 0" />
+      <mass value="1.59167035" />
+      <inertia ixx="0.00811836" ixy="-8.9e-07" ixz="8.82e-06" iyy="0.00796295" iyz="0.00012311" izz="0.00150574" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://t701_ht_description/meshes/l_joint3_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://t701_ht_description/meshes/l_joint3_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="A_l_joint3_link" type="revolute">
+    <origin xyz="0.00075 0 -0.0649" rpy="0 0 0" />
+    <parent link="l_joint2_link" />
+    <child link="l_joint3_link" />
+    <axis xyz="0 0 1" />
+    <limit lower="-1.5708" upper="1.5708" effort="45" velocity="78" />
+  </joint>
+  <link name="l_joint4_link">
+    <inertial>
+      <origin xyz="-0.00065026 0.00101787 -0.05992116" rpy="0 0 0" />
+      <mass value="0.59443643" />
+      <inertia ixx="0.00092604" ixy="-1.84e-06" ixz="3.97e-06" iyy="0.00075485" iyz="-4.034e-05" izz="0.00065464" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://t701_ht_description/meshes/l_joint4_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://t701_ht_description/meshes/l_joint4_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="A_l_joint4_link" type="revolute">
+    <origin xyz="0 0 -0.1612" rpy="0 0 0" />
+    <parent link="l_joint3_link" />
+    <child link="l_joint4_link" />
+    <axis xyz="0 1 0" />
+    <limit lower="-2.2689" upper="1.0472" effort="45" velocity="78" />
+  </joint>
+  <link name="l_joint5_link">
+    <inertial>
+      <origin xyz="0.00042174 -0.00054391 -0.04890851" rpy="0 0 0" />
+      <mass value="0.61984822" />
+      <inertia ixx="0.00057872" ixy="-2.16e-06" ixz="4.962e-05" iyy="0.00051921" iyz="8.02e-06" izz="0.00046414" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://t701_ht_description/meshes/l_joint5_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://t701_ht_description/meshes/l_joint5_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="A_l_joint5_link" type="revolute">
+    <origin xyz="0 0 -0.091909" rpy="0 0 0" />
+    <parent link="l_joint4_link" />
+    <child link="l_joint5_link" />
+    <axis xyz="0 0 1" />
+    <limit lower="-1.3614" upper="1.3614" effort="21" velocity="75" />
+  </joint>
+  <link name="l_joint6_link">
+    <inertial>
+      <origin xyz="3.877e-05 0.0021645 -0.00011367" rpy="0 0 0" />
+      <mass value="0.29523734" />
+      <inertia ixx="0.00011836" ixy="1e-07" ixz="4.4e-07" iyy="0.00012024" iyz="-1.6e-07" izz="0.00014489" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://t701_ht_description/meshes/l_joint6_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://t701_ht_description/meshes/l_joint6_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="A_l_joint6_link" type="revolute">
+    <origin xyz="0 0 -0.1276" rpy="0 0 0" />
+    <parent link="l_joint5_link" />
+    <child link="l_joint6_link" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.7854" upper="0.7854" effort="21" velocity="75" />
+  </joint>
+  <link name="l_joint7_link">
+    <inertial>
+      <origin xyz="0.08046172 0.00025452 0.00134164" rpy="0 0 0" />
+      <mass value="0.67662928" />
+      <inertia ixx="0.00061505" ixy="1.692e-05" ixz="-1.013e-05" iyy="0.00120721" iyz="-1.04e-06" izz="0.0014148" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://t701_ht_description/meshes/l_joint7_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://t701_ht_description/meshes/l_joint7_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="A_l_joint7_link" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="l_joint6_link" />
+    <child link="l_joint7_link" />
+    <axis xyz="0 1 0" />
+    <limit lower="0" upper="3.14" effort="10" velocity="160" />
+  </joint>
+  <link name="r_joint1_link">
+    <inertial>
+      <origin xyz="-0.00712821 -0.05359231 6.003e-05" rpy="0 0 0" />
+      <mass value="1.15977606" />
+      <inertia ixx="0.00150398" ixy="-3.262e-05" ixz="-6e-08" iyy="0.00124278" iyz="-1.18e-06" izz="0.00147679" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://t701_ht_description/meshes/r_joint1_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://t701_ht_description/meshes/r_joint1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="A_r_joint1_link" type="revolute">
+    <origin xyz="0 -0.126 0.513" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="r_joint1_link" />
+    <axis xyz="0 1 0" />
+    <limit lower="-3.0543" upper="1.6581" effort="70" velocity="60" />
+  </joint>
+  <link name="r_joint2_link">
+    <inertial>
+      <origin xyz="-0.01934445 -1.746e-05 -0.04177167" rpy="0 0 0" />
+      <mass value="0.15403929" />
+      <inertia ixx="0.00010685" ixy="1.6e-07" ixz="4.47e-05" iyy="0.00017847" iyz="-9e-08" izz="0.000127" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://t701_ht_description/meshes/r_joint2_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://t701_ht_description/meshes/r_joint2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="A_r_joint2_link" type="revolute">
+    <origin xyz="0 -0.059 0" rpy="0 0 0" />
+    <parent link="r_joint1_link" />
+    <child link="r_joint2_link" />
+    <axis xyz="1 0 0" />
+    <limit lower="-3.4208" upper="0.2793" effort="70" velocity="60" />
+  </joint>
+  <link name="r_joint3_link">
+    <inertial>
+      <origin xyz="-0.00138122 -0.00129708 -0.09427347" rpy="0 0 0" />
+      <mass value="1.59167035" />
+      <inertia ixx="0.00811871" ixy="4.33e-06" ixz="4.92e-06" iyy="0.00796198" iyz="-0.0001316" izz="0.00150514" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://t701_ht_description/meshes/r_joint3_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://t701_ht_description/meshes/r_joint3_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="A_r_joint3_link" type="revolute">
+    <origin xyz="0.00075 0 -0.0649" rpy="0 0 0" />
+    <parent link="r_joint2_link" />
+    <child link="r_joint3_link" />
+    <axis xyz="0 0 1" />
+    <limit lower="-1.5708" upper="1.5708" effort="45" velocity="78" />
+  </joint>
+  <link name="r_joint4_link">
+    <inertial>
+      <origin xyz="-0.00064978 -0.00121462 -0.0599215" rpy="0 0 0" />
+      <mass value="0.5938752" />
+      <inertia ixx="0.00092486" ixy="-9.3e-07" ixz="3.97e-06" iyy="0.00075484" iyz="3.934e-05" izz="0.00065341" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://t701_ht_description/meshes/r_joint4_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://t701_ht_description/meshes/r_joint4_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="A_r_joint4_link" type="revolute">
+    <origin xyz="0 0 -0.1612" rpy="0 0 0" />
+    <parent link="r_joint3_link" />
+    <child link="r_joint4_link" />
+    <axis xyz="0 1 0" />
+    <limit lower="-2.2689" upper="1.0472" effort="45" velocity="78" />
+  </joint>
+  <link name="r_joint5_link">
+    <inertial>
+      <origin xyz="0.00038173 -0.00054314 -0.04902034" rpy="0 0 0" />
+      <mass value="0.62073038" />
+      <inertia ixx="0.00058425" ixy="-2.14e-06" ixz="4.767e-05" iyy="0.00052539" iyz="8.06e-06" izz="0.00046488" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://t701_ht_description/meshes/r_joint5_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://t701_ht_description/meshes/r_joint5_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="A_r_joint5_link" type="revolute">
+    <origin xyz="0 0 -0.091914" rpy="0 0 0" />
+    <parent link="r_joint4_link" />
+    <child link="r_joint5_link" />
+    <axis xyz="0 0 1" />
+    <limit lower="-1.3614" upper="1.3614" effort="21" velocity="75" />
+  </joint>
+  <link name="r_joint6_link">
+    <inertial>
+      <origin xyz="0.00019167 -0.0021645 -0.00011638" rpy="0 0 0" />
+      <mass value="0.29523734" />
+      <inertia ixx="0.00011836" ixy="-5e-08" ixz="-5.7e-07" iyy="0.00012023" iyz="1.4e-07" izz="0.00014488" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://t701_ht_description/meshes/r_joint6_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://t701_ht_description/meshes/r_joint6_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="A_r_joint6_link" type="revolute">
+    <origin xyz="0 0 -0.1276" rpy="0 0 0" />
+    <parent link="r_joint5_link" />
+    <child link="r_joint6_link" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.7854" upper="0.7854" effort="21" velocity="75" />
+  </joint>
+  <link name="r_joint7_link">
+    <inertial>
+      <origin xyz="0.080543 -0.0003097 0.00141262" rpy="0 0 0" />
+      <mass value="0.67558257" />
+      <inertia ixx="0.0006136" ixy="-1.886e-05" ixz="-9.61e-06" iyy="0.00120411" iyz="-1.57e-06" izz="0.00141065" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://t701_ht_description/meshes/r_joint7_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://t701_ht_description/meshes/r_joint7_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="A_r_joint7_link" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="r_joint6_link" />
+    <child link="r_joint7_link" />
+    <axis xyz="0 1 0" />
+    <limit lower="0" upper="3.14" effort="10" velocity="160" />
+  </joint>
+</robot>

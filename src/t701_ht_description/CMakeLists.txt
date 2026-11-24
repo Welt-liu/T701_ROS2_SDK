@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.8)
+project(t701_ht_description)
+find_package(ament_cmake REQUIRED)
+install(DIRECTORY meshes urdf config DESTINATION share/${PROJECT_NAME})
+install(FILES LICENSE source_provenance.json DESTINATION share/${PROJECT_NAME})
+ament_package()

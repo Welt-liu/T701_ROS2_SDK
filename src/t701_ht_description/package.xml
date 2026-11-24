@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>t701_ht_description</name>
+  <version>2.0.0</version>
+  <description>Independent T701-HT dual arm model from SDK 2.0.</description>
+  <maintainer email="sdk@example.com">T701-HT SDK maintainers</maintainer>
+  <license>MIT</license>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>rviz2</exec_depend>
+  <export><build_type>ament_cmake</build_type></export>
+</package>
